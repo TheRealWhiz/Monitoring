@@ -2,24 +2,39 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net461;net471;net472;net48</TargetFrameworks>
-		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<TargetFrameworks>net461;net471;net472;net48;net481</TargetFrameworks>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Company>Whiz</Company>
 		<Authors>Gabriele Vaccaro</Authors>
-		<Description>SDK for the Monitoring Windows Application</Description>
+		<Description>SDK for the Whiz Monitoring Windows Application</Description>
 		<Copyright>Whiz</Copyright>
 		<PackageTags></PackageTags>
 		<Version>1.0.0</Version>
-		<DocumentationFile>bin\$(TargetConfiguration)\$(TargetFrameworkVersion)\MonitoringApplication.Common.xml</DocumentationFile>
+		<DocumentationFile></DocumentationFile>
 		<RootNamespace>Whiz.Monitoring.Application.Common</RootNamespace>
 		<PackageId>Whiz.Monitoring.Application.Common</PackageId>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Title>Windows Monitoring Application SDK</Title>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\LICENSE.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<Reference Include="System.Configuration.Install" />
 		<Reference Include="System.Management" />
-		<Reference Include="System.Windows.Forms">
-		  <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Windows.Forms.dll</HintPath>
-		</Reference>
+		<Reference Include="System.Windows.Forms" />
+		  <!--<HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Windows.Forms.dll</HintPath>
+		</Reference>-->
 	</ItemGroup>
 </Project>
